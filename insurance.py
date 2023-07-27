@@ -4,8 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
 nav = st.sidebar.radio("Navigation", ["About", "Predict"])
-file_path = "C:/Users/RHYTHM/Downloads/insurance.csv"
-df = pd.read_csv(file_path)
+df = pd.read_csv("insurance.csv")
 df.replace({'sex': {'male': 0, 'female': '1'}}, inplace=True)
 df.replace({'smoker': {'yes': 0, 'no': '1'}}, inplace=True)
 df.replace({'region': {'southeast': 0, 'southwest': 1, 'northeast': 2, 'northwest': 3}}, inplace=True)
